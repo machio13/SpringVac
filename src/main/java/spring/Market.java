@@ -12,5 +12,12 @@ public enum Market {
         this.firstChar = firstChar;
     }
 
-    public String
+    public static Market isRename(String market) {
+        return switch (market) {
+            case "P" -> Prime;
+            case "S" -> Standard;
+            case "G" -> Growth;
+            default -> Non;
+        };
+    }
 }
