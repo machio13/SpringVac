@@ -21,6 +21,8 @@ public class MasterCsvReader {
                 System.out.println("正しく数値が変換できていません。");
             }catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("CSVデータの形式が不正です。");
+            }catch (IllegalArgumentException e) {
+                System.out.println("データに問題があります。確認してください。");
             }
         }
         return stockList;

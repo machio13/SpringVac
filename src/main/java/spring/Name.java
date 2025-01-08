@@ -6,7 +6,7 @@ public class Name {
     public Name(String value) {
 
         if (!isValidName(value)) {
-            throw new IllegalArgumentException("不正なname" + value);
+            throw new IllegalArgumentException("不正なname : " + value);
         }
 
         this.value = value;
@@ -22,7 +22,7 @@ public class Name {
     }
 
     private boolean isValidName(String value) {
-        String regex = "[a-zA-Z0-9' .()]*";
+        String regex = "[a-zA-Z0-9 .()]*";
         return value.matches(regex);
     }
 }
